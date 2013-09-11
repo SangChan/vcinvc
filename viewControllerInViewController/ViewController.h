@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AnotherViewController.h"
 
 @interface ViewController : UIViewController
 
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *button;
+- (IBAction)buttonClicked:(id)sender;
 @end

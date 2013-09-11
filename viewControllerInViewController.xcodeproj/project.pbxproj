@@ -23,6 +23,7 @@
 		638048A317E0A48700F51CB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6380487E17E0A48600F51CB6 /* Foundation.framework */; };
 		638048AB17E0A48700F51CB6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 638048A917E0A48700F51CB6 /* InfoPlist.strings */; };
 		638048AE17E0A48700F51CB6 /* viewControllerInViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 638048AD17E0A48700F51CB6 /* viewControllerInViewControllerTests.m */; };
+		638048B917E0A4FC00F51CB6 /* AnotherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638048B817E0A4FC00F51CB6 /* AnotherViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		638048AA17E0A48700F51CB6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		638048AC17E0A48700F51CB6 /* viewControllerInViewControllerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = viewControllerInViewControllerTests.h; sourceTree = "<group>"; };
 		638048AD17E0A48700F51CB6 /* viewControllerInViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = viewControllerInViewControllerTests.m; sourceTree = "<group>"; };
+		638048B717E0A4FC00F51CB6 /* AnotherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherViewController.h; sourceTree = "<group>"; };
+		638048B817E0A4FC00F51CB6 /* AnotherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				6380489517E0A48600F51CB6 /* ViewController.m */,
 				6380489717E0A48600F51CB6 /* ViewController.xib */,
 				6380488317E0A48600F51CB6 /* Supporting Files */,
+				638048B717E0A4FC00F51CB6 /* AnotherViewController.h */,
+				638048B817E0A4FC00F51CB6 /* AnotherViewController.m */,
 			);
 			path = viewControllerInViewController;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				6380488917E0A48600F51CB6 /* main.m in Sources */,
 				6380488D17E0A48600F51CB6 /* AppDelegate.m in Sources */,
 				6380489617E0A48600F51CB6 /* ViewController.m in Sources */,
+				638048B917E0A4FC00F51CB6 /* AnotherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +390,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "viewControllerInViewController/viewControllerInViewController-Prefix.pch";
 				INFOPLIST_FILE = "viewControllerInViewController/viewControllerInViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -395,6 +402,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "viewControllerInViewController/viewControllerInViewController-Prefix.pch";
 				INFOPLIST_FILE = "viewControllerInViewController/viewControllerInViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
