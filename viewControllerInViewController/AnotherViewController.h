@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AnotherViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> 
-
+@property (strong, nonatomic) UIView *myView;
 @property (strong, nonatomic) UITableView *myTableView;
 @end

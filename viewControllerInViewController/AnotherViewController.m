@@ -8,31 +8,54 @@
 
 #import "AnotherViewController.h"
 
-@interface AnotherViewController ()
+@interface AnotherViewController () {
+@private UITapGestureRecognizer *tapGesture;
+}
 
 @end
 
 @implementation AnotherViewController
 
-@synthesize myTableView;
+@synthesize myTableView, myView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.view.frame = CGRectMake(20, 40, 200, 400);
-    self.view.backgroundColor = [UIColor blackColor];
+    myView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    myView.backgroundColor = [UIColor blackColor];
+    myView.alpha = 0.5;
+    [self.view addSubview:myView];
+    
+    tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tabbed)];
+    [myView addGestureRecognizer:tapGesture];
+    
     myTableView = [[UITableView alloc]initWithFrame:CGRectMake(5, 5, 190, 390) style:UITableViewStylePlain];
     myTableView.delegate = self;
     myTableView.dataSource = self;
     myTableView.userInteractionEnabled = YES;
+    myTableView.alpha = 1.0;
     [self.view addSubview:myTableView];
+}
+
+-(void)tabbed
+{
+    myView.alpha = 1.0;
+    myView.hidden = YES;
+    myTableView.hidden = YES;
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"REMOVE_ANOTHER" object:nil];
+    //[myTableView removeFromSuperview];
+    //[myView removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) viewDidUnload {
+    [myView removeGestureRecognizer:tapGesture];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

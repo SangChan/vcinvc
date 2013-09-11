@@ -20,6 +20,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeAnotheView) name:@"REMOVE_ANOTHER" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,5 +37,9 @@
     another = [[AnotherViewController alloc]init];
     //[self addChildViewController:another];
     [self.view.window addSubview:another.view];
+}
+
+-(void)removeAnotheView{
+    [another.view removeFromSuperview];
 }
 @end
