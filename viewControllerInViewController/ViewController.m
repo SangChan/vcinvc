@@ -21,6 +21,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(removeAnotheView) name:@"REMOVE_ANOTHER" object:nil];
+    self.title = @"지도";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(flipNewBar)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,12 +36,32 @@
     [super viewDidUnload];
 }
 - (IBAction)buttonClicked:(id)sender {
-    another = [[AnotherViewController alloc]init];
-    //[self addChildViewController:another];
-    [self.view.window addSubview:another.view];
+    UIButton *button = (UIButton *)sender;
+    if (button.tag == 0)
+    {
+        another = [[AnotherViewController alloc]init];
+        [self.view.window addSubview:another.view];
+    }
+    else {
+        MyPlaceViewController *myPlace = [[MyPlaceViewController alloc]initWithNibName:@"MyPlaceViewController" bundle:nil];
+        UINavigationController *navCon = [[UINavigationController alloc]initWithRootViewController:myPlace];
+        [self presentModalViewController:navCon animated:YES];
+        //[self.navigationController pushViewController:myPlace animated:YES];
+    }
 }
 
 -(void)removeAnotheView{
     [another.view removeFromSuperview];
+}
+
+-(void)flipNewBar
+{
+    DetailViewController *detail = [[DetailViewController alloc]initWithNibName:@"DetailViewController" bundle:nil];
+    //[self.navigationController pushViewController:detail animated:NO];
+    [UIView beginAnimations:@"animation" context:nil];
+    [UIView setAnimationDuration:0.7];
+    [self.navigationController pushViewController:detail animated:NO];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.navigationController.view cache:NO];
+    [UIView commitAnimations];
 }
 @end

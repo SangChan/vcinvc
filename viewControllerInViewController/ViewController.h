@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "AnotherViewController.h"
+#import "DetailViewController.h"
+#import "MyPlaceViewController.h"
 
 @interface ViewController : UIViewController
 

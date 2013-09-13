@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AnotherCell.h"
 
 @interface AnotherViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> 
 @property (strong, nonatomic) UIView *myView;
