@@ -45,8 +45,10 @@
     else {
         MyPlaceViewController *myPlace = [[MyPlaceViewController alloc]initWithNibName:@"MyPlaceViewController" bundle:nil];
         UINavigationController *navCon = [[UINavigationController alloc]initWithRootViewController:myPlace];
-        [self presentModalViewController:navCon animated:YES];
+        //[self presentModalViewController:navCon animated:YES];
         //[self.navigationController pushViewController:myPlace animated:YES];
+        [self presentViewController:navCon animated:YES completion:^{
+        }];
     }
 }
 

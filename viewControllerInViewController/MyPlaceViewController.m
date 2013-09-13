@@ -84,12 +84,15 @@
 
 -(void)doEdit
 {
-    
+    self.cancelButton.hidden = YES;
+    self.submitButton.hidden = YES;
 }
 
 -(void)removeAll
 {
-    [self dismissModalViewControllerAnimated:YES];
+    //[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
 }
 
 @end
