@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+ToastMessage.h"
 
 @interface DetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -14,3 +15,4 @@
 @property (strong, nonatomic) IBOutlet UIButton *pickerOpenButton;
 @property (nonatomic, strong) NSArray *pickerContent;
 @end
+ 

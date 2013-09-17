@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6359E61B17E70C830073493A /* UIView+ToastMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359E61A17E70C830073493A /* UIView+ToastMessage.m */; };
 		6380487D17E0A48600F51CB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6380487C17E0A48600F51CB6 /* UIKit.framework */; };
 		6380487F17E0A48600F51CB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6380487E17E0A48600F51CB6 /* Foundation.framework */; };
 		6380488117E0A48600F51CB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6380488017E0A48600F51CB6 /* CoreGraphics.framework */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6359E61917E70C830073493A /* UIView+ToastMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ToastMessage.h"; sourceTree = "<group>"; };
+		6359E61A17E70C830073493A /* UIView+ToastMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ToastMessage.m"; sourceTree = "<group>"; };
 		6380487917E0A48600F51CB6 /* viewControllerInViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viewControllerInViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6380487C17E0A48600F51CB6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6380487E17E0A48600F51CB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,6 +163,8 @@
 				63D5DADF17E2F25A00D25BA3 /* MyPlaceViewController.h */,
 				63D5DAE017E2F25A00D25BA3 /* MyPlaceViewController.m */,
 				63D5DAE117E2F25B00D25BA3 /* MyPlaceViewController.xib */,
+				6359E61917E70C830073493A /* UIView+ToastMessage.h */,
+				6359E61A17E70C830073493A /* UIView+ToastMessage.m */,
 			);
 			path = viewControllerInViewController;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				6380488D17E0A48600F51CB6 /* AppDelegate.m in Sources */,
 				6380489617E0A48600F51CB6 /* ViewController.m in Sources */,
 				638048B917E0A4FC00F51CB6 /* AnotherViewController.m in Sources */,
+				6359E61B17E70C830073493A /* UIView+ToastMessage.m in Sources */,
 				63D5DAD517E1B72100D25BA3 /* AnotherCell.m in Sources */,
 				63D5DADB17E2AED200D25BA3 /* DetailViewController.m in Sources */,
 				63D5DAE217E2F25C00D25BA3 /* MyPlaceViewController.m in Sources */,
@@ -432,7 +438,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "viewControllerInViewController/viewControllerInViewController-Prefix.pch";
 				INFOPLIST_FILE = "viewControllerInViewController/viewControllerInViewController-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -445,7 +451,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "viewControllerInViewController/viewControllerInViewController-Prefix.pch";
 				INFOPLIST_FILE = "viewControllerInViewController/viewControllerInViewController-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

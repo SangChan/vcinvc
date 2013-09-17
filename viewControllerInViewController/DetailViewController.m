@@ -30,7 +30,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view from its nib
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(close:)];
+    //self.navigationItem.leftBarButtonItem.enabled = NO;
+    [self.navigationItem setHidesBackButton:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -66,7 +69,11 @@
 
 - (IBAction)buttonClicked:(id)sender
 {
-    if (!picker) {
+    UIButton *pressedButton = (UIButton *)sender;
+    /*if (pressedButton.tag == 0) {
+        if (picker) {
+            return;
+        }
         picker = [[UIPickerView alloc]init];
         picker.dataSource = self;
         picker.delegate = self;
@@ -75,7 +82,27 @@
         pickerFrame.origin.y = self.view.frame.size.height - pickerFrame.size.height;
         picker.frame = pickerFrame;
         [self.view addSubview:picker];
+
     }
+    else {
+        for (int i=1; i<3; i++) {
+            UIButton *button = (UIButton*)[self.view viewWithTag:i];
+            if (pressedButton.tag == button.tag) {
+                button.selected = YES;
+            }
+            else {
+                button.selected = NO;
+            }
+        }
+    }*/
+    
+    [self.view showWithFrame:CGRectMake(25, self.view.frame.size.height-80 , 270, 36) message:@"현재 위치와 50m 이상 오차가 발생할 수 있습니다." duration:1.5];
+
+}
+
+-(void)close:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (NSArray *)pickerContent
